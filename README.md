@@ -1,12 +1,15 @@
 # First-project-using-Flask-admin-portal
 
-In the beginning of the assignment, I had no Idea how to do it. I did many research and almost every source were suggesting either Django or Flask. Since, some of my classmates were using flask I decided to use flask, because I thought if I get lost, I would ask them to help me. 
+ 
 The reasons I decided to use flask were:
 1.	Learning a new framework, which can be very useful in the real world.
 2.	In my opinion, it is way more efficient than writing html pages using python. 
 I watched many tutorials about flask but one of the most useful was this -  https://www.youtube.com/watch?v=dam0GPOAvVI&t=6653s 
 First thing I did was writing queries, which seemed easy but the database given is not correct, so it made writing queries harder.
 I wrote 5 queries in different python files because that was the requirement. I used string formatting to change the values of queries. For example, changing an intake and so on. For connecting database, I used given template using Jaydebeapi. I did not have to set up java environment variable because my h2 file is placed in the same folder as java files. So if you’ll have problem connecting the database that might be an issue. 
+
+In order the website to work you need to connect it to the database. The database I was using was H2.
+
 
 Now, I am going to explain my code in details.
 1.	Main.py
