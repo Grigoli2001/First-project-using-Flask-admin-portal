@@ -1,0 +1,138 @@
+body {
+  margin: 0;
+}
+.navbar {
+  height: 60px;
+  width: 100%;
+  background-color: rgb(15, 0, 183);
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.navbar > a {
+  color: white;
+  text-decoration: none;
+  position: absolute;
+  z-index: 1;
+  font-size: x-large;
+  font-family: Arial, Helvetica, sans-serif;
+  padding-left: 5%;
+}
+.navbar > a:hover {
+  color: rgb(176, 169, 169);
+  transition: 0.3s;
+}
+
+.nav-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-div > h3 {
+  color: white;
+  font-size: x-large;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.nav-img {
+  height: 90%;
+  width: 7%;
+}
+
+.welcome {
+  display: flex;
+  justify-content: center;
+}
+.welcome > p {
+  padding-left: 5px;
+  font-size: x-large;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.program-list > ul {
+  width: 50%;
+}
+.program-list > ul > a {
+  text-decoration: none;
+  font-size: large;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.program-list > ul > a:hover {
+  color: gray;
+  font-size: x-large;
+  transition: 0.9s;
+}
+.first-part,
+.second-part {
+  display: flex;
+}
+.program-list,
+.att-list {
+  text-align: left;
+  width: 60%;
+}
+.program-list > h1 {
+  padding-left: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.att-list > h1 {
+  padding-left: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.att-list > ul > p {
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#pie {
+  width: 100%;
+  height: 250px;
+  padding-right: 30%;
+}
+#bar {
+  width: 100%;
+  height: 400px;
+  padding-right: 25%;
+  padding-top: 20%;
+}
+.pop_container {
+  margin: 10px;
+}
+.grade_container {
+  margin: 10px;
+}
+.table-wrapper > table {
+  height: 100%;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table td {
+  border: none;
+  height: 30px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.table-wrapper > table tr:nth-child(odd) {
+  background-color: #b1acac;
+}
+.t-head > td {
+  color: white;
+  font-size: larger;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table a {
+  text-decoration: none;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+}
+table a:hover {
+  color: gray;
+  transition: 0.3s;
+  font-size: x-large;
+}
+#generated-time {
+  text-align: center;
+  margin-top: 50px;
+}

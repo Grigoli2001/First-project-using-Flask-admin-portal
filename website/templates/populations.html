@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Populations</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="{{url_for('root.home')}}">Home</a>
+        <div class="nav-div"><img class="nav-img"
+                src="{{url_for('static',filename = 'assets/EPITA School of Engineering and Computer Science_Logo.png')}}"
+                alt="">
+            <h3>EPITA INTERNATIONAL</h3>
+        </div>
+    </nav>
+    <div class="pop_container">
+        <h2>Students</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr class="t-head" style="background-color: darkslategrey;">
+                        <td>EMAIL</td>
+                        <td>FIrst Name</td>
+                        <td>Last Name</td>
+                        <td>Passed</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for row in pops%}
+                    <tr>
+                        <td>{{row[0]}}</td>
+                        <td>{{row[1]}}</td>
+                        <td>{{row[2]}}</td>
+                        <td>{{row[3]}}</td>
+                    </tr>
+                    {%endfor%}
+                </tbody>
+
+            </table>
+        </div>
+        <h2>Courses</h2>
+        <div class="table-wrapper">
+            <table>
+                <tr class="t-head" style="background-color: darkslategray;">
+                    <td>Coures ID</td>
+                    <td>Course Name</td>
+                    <td>Session Count</td>
+                </tr>
+                {%for i in stud%}
+                <tr>
+                    <td>{{i[0]}}</td>
+                    <td><a href={{url_for( 'root.grades' , course=course, year=year, intake=intake, course_name=i[0]
+                            )}}>{{i[1]}}</a></td>
+                    <td>{{i[2]}}</td>
+                </tr>
+                {%endfor%}
+
+
+            </table>
+        </div>
+    </div>
+    <p id="generated-time"></p>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+
+</html>

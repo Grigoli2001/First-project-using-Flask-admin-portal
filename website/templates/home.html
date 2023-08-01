@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <title>Home</title>
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="{{url_for('root.home')}}">Home</a>
+
+        <div class="nav-div"><img class="nav-img"
+                src="{{url_for('static',filename = 'assets/EPITA School of Engineering and Computer Science_Logo.png')}}"
+                alt="">
+            <h3>EPITA INTERNATIONAL</h3>
+
+        </div>
+    </nav>
+    <div class="welcome">
+        <p>Welcome,</p>
+        <p style="font-weight: bolder;">Stéphanie</p>
+    </div>
+    <div class="container">
+        <div class="first-part">
+            <div class="program-list">
+                <h1>Active Populations</h1>
+                <ul>
+                    <a href={{url_for('root.population' , course='AIs' , year=2020, intake='FALL' )}}>
+                        <p style="list-style: none;">AIs - Artificial Intelligence Systems -
+                            F2020({{pop("AIs",2020,"FALL")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='AIs' , year=2021, intake='SPRING' )}}>
+                        <p style="list-style: none;">AIs - Artificial Intelligence Systems -
+                            S2021({{pop("AIs",2021,"SPRING")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='CS' , year=2020, intake='FALL' )}}>
+                        <p style="list-style: none;">CS - Computer Science - F2020({{pop("CS",2020,"FALL")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='CS' , year=2021, intake='SPRING' )}}>
+                        <p style="list-style: none;">CS - Computer Science - S2021({{pop("CS",2021,"SPRING")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='DSA' , year=2020, intake='FALL' )}}>
+                        <p style="list-style: none;">DSA - Data Structures and Algorithms -
+                            F2020({{pop("DSA",2020,"FALL")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='DSA' , year=2021, intake='SPRING' )}}>
+                        <p style="list-style: none;">DSA - Data Structures and Algorithms -
+                            S2021({{pop("DSA",2021,"SPRING")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='ISM' , year=2020, intake='FALL' )}}>
+                        <p style="list-style: none;">ISM - Information Systems Management -
+                            F2020({{pop("ISM",2020,"FALL")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='ISM' , year=2021, intake='SPRING' )}}>
+                        <p style="list-style: none;">ISM - Information Systems Management -
+                            S2021({{pop("ISM",2021,"SPRING")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='SE' , year=2020, intake='FALL' )}}>
+                        <p style="list-style: none;">SE - Software Engeneering - F2020({{pop("SE",2020,"FALL")}})</p>
+                    </a>
+
+                </ul>
+                <ul>
+                    <a href={{url_for('root.population' , course='SE' , year=2021, intake='SPRING' )}}>
+                        <p style="list-style: none;">SE - Software Engeneering - S2021({{pop("SE",2021,"SPRING")}})</p>
+                    </a>
+
+                </ul>
+            </div>
+            <div class="pie">
+                <canvas id="pie"></canvas>
+            </div>
+        </div>
+        <div class="second-part">
+            <div class="att-list">
+                <h1>Overall Attendance</h1>
+
+                <ul>
+                    <p style="list-style: none;">AIs - Artificial Intelligence Systems -
+                        F2020({{att("AIs",2020,"FALL")}}%)
+                    </p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">AIs - Artificial Intelligence Systems -
+                        S2021({{att("AIs",2021,"SPRING")}}%)</p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">CS - Computer Science - F2020({{att("CS",2020,"FALL")}}%)</p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">CS - Computer Science - S2021({{att("CS",2021,"SPRING")}}%)</p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">DSA - Data Structures and Algorithms -
+                        F2020({{att("DSA",2020,"FALL")}}%)
+                    </p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">DSA - Data Structures and Algorithms -
+                        S2021({{att("DSA",2021,"SPRING")}}%)
+                    </p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">ISM - Information Systems Management -
+                        F2020({{att("ISM",2020,"FALL")}}%)
+                    </p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">ISM - Information Systems Management -
+                        S2021({{att("ISM",2021,"SPRING")}}%)
+                    </p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">SE - Software Engeneering - F2020({{att("SE",2020,"FALL")}}%)</p>
+                </ul>
+                <ul>
+                    <p style="list-style: none;">SE - Software Engeneering - S2021({{att("SE",2021,"SPRING")}}%)</p>
+                </ul>
+            </div>
+            <div class="bar">
+                <canvas id="bar"></canvas>
+            </div>
+        </div>
+    </div>
+    <p id="generated-time"></p>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>const ctx = document.getElementById('pie').getContext("2d");
+
+        var piegraph = new Chart(ctx, {
+            type: 'pie',
+            data: {
+                labels: ['AIs-F2020', 'AIs-S2021', 'CS-F2020', 'CS-S2021', 'DSA-F2020', 'DSA-S2021', 'ISM-F2020', 'ISM-S2021', 'SE-F2020', 'SE-S2021'],
+                datasets: [{
+                    label: 'Average Count',
+                    data: {{ count_list }},
+            borderWidth: 1
+        }]
+          },
+        options: {
+            responsive: false
+        }
+        });
+        const ctx2 = document.getElementById('bar').getContext("2d");
+
+        var piegraph = new Chart(ctx2, {
+            type: 'bar',
+            data: {
+                labels: ['AIs-F2020', 'AIs-S2021', 'CS-F2020', 'CS-S2021', 'DSA-F2020', 'DSA-S2021', 'ISM-F2020', 'ISM-S2021', 'SE-F2020', 'SE-S2021'],
+                datasets: [{
+                    label: 'Attendance Rate',
+                    data: {{ att_list }},
+            borderWidth: 1
+        }]
+          },
+        options: {
+            responsive: false
+        }
+        });
+    </script>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+
+</html>
